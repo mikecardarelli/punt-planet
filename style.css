@@ -324,6 +324,77 @@ body {
 .pts-neg { color: var(--bills-red); font-weight: 700; }
 .pts-zero { color: #888; }
 
+/* ── Hall of Shame divider ────────────────────────────── */
+.shame-divider {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 2.5rem auto 1.5rem;
+  text-align: center;
+}
+
+.shame-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 3px;
+  background: var(--line-white);
+}
+
+.shame-divider span {
+  position: relative;
+  display: inline-block;
+  background: var(--bills-red);
+  color: var(--white);
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+}
+
+/* ── Hall of Shame cards ──────────────────────────────── */
+.shame-container .punt-card {
+  border-color: var(--bills-red);
+}
+
+.shame-container .card-rank {
+  color: var(--bills-red);
+}
+
+.shame-container .card-gif-thumb {
+  border-color: var(--bills-red);
+}
+
+.shame-container .card-tupa {
+  background: var(--bills-red);
+}
+
+.shame-container .expand-btn {
+  border-color: var(--bills-red);
+  color: var(--bills-red);
+}
+
+.shame-container .expand-btn[aria-expanded="true"] {
+  background: var(--bills-red);
+  color: var(--white);
+}
+
+.shame-container .card-details {
+  background: #fff0f2;
+  border-top-color: var(--bills-red);
+}
+
+.shame-container .tupa-table thead th {
+  background: var(--bills-red);
+}
+
+.shame-container .tupa-table tfoot th {
+  background: var(--bills-blue);
+}
+
 /* ── TUPA Rules button ────────────────────────────────── */
 .rules-btn {
   position: absolute;
