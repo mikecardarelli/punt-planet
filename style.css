@@ -1,0 +1,455 @@
+/* ── Reset & base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bills-blue: #00338D;
+  --bills-red:  #C60C30;
+  --field-green: #3a7d2c;
+  --field-green-alt: #347228;
+  --white: #ffffff;
+  --line-white: rgba(255,255,255,0.55);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  cursor: none; /* replaced by football emoji cursor */
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  background: var(--field-green);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Football emoji cursor ────────────────────────────── */
+#cursor {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  font-size: 1.6rem;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  transition: transform 0.05s linear;
+}
+
+/* ── End zones ────────────────────────────────────────── */
+.endzone {
+  background: var(--bills-red);
+  width: 100%;
+  padding: 2.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative; /* anchors the rules-btn and the ::before pseudo-element */
+}
+
+/* diagonal stripe texture like a real end zone */
+.endzone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 18px,
+    rgba(0,0,0,0.06) 18px,
+    rgba(0,0,0,0.06) 20px
+  );
+  pointer-events: none;
+}
+
+.endzone-text {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bills-blue);
+  -webkit-text-stroke: 3px var(--white);
+  text-stroke: 3px var(--white);
+  text-shadow:
+    4px 4px 0 var(--white),
+   -2px -2px 0 var(--white),
+    2px -2px 0 var(--white),
+   -2px  2px 0 var(--white);
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.endzone-bottom .endzone-text {
+  transform: rotate(180deg);
+}
+
+/* ── Gridiron field ───────────────────────────────────── */
+.field {
+  position: relative;
+  padding: 3rem 1.5rem 4rem;
+  /* alternating green stripes (10-yd bands) */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--field-green)     0px,
+    var(--field-green)     120px,
+    var(--field-green-alt) 120px,
+    var(--field-green-alt) 240px
+  );
+}
+
+/* yard lines */
+.field::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 118px,
+    var(--line-white) 118px,
+    var(--line-white) 122px,
+    transparent 122px,
+    transparent 240px
+  );
+  pointer-events: none;
+}
+
+/* hash marks */
+.field::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* left hash column */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 58px,
+      var(--line-white) 58px,
+      var(--line-white) 62px,
+      transparent 62px,
+      transparent 120px
+    ),
+    /* right hash column */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 58px,
+      var(--line-white) 58px,
+      var(--line-white) 62px,
+      transparent 62px,
+      transparent 120px
+    );
+  background-size: 14px 120px, 14px 120px;
+  background-position: 28% 0, 72% 0;
+  background-repeat: repeat-y, repeat-y;
+  pointer-events: none;
+}
+
+/* ── Cards container ──────────────────────────────────── */
+.cards-container {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Individual punt card ─────────────────────────────── */
+.punt-card {
+  background: rgba(255,255,255,0.96);
+  border-radius: 10px;
+  border: 3px solid var(--bills-blue);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.punt-card:hover {
+  box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+}
+
+/* summary row */
+.card-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+}
+
+/* rank badge */
+.card-rank {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--bills-blue);
+  min-width: 3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* gif thumbnail */
+.card-gif-thumb {
+  flex-shrink: 0;
+  width: 130px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+  border: 2px solid var(--bills-blue);
+}
+
+.card-gif-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* text meta */
+.card-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+/* TUPA score badge */
+.card-tupa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bills-blue);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  flex-shrink: 0;
+}
+
+.tupa-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.tupa-score {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+/* expand button */
+.expand-btn {
+  background: none;
+  border: 2px solid var(--bills-blue);
+  color: var(--bills-blue);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s, transform 0.2s;
+}
+
+.expand-btn[aria-expanded="true"] {
+  background: var(--bills-blue);
+  color: var(--white);
+  transform: rotate(180deg);
+}
+
+/* expanded details */
+.card-details {
+  border-top: 2px solid var(--bills-blue);
+  padding: 1rem 1.2rem 1.2rem;
+  background: #f0f4ff;
+}
+
+.tupa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.tupa-table th,
+.tupa-table td {
+  padding: 0.45rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #ccd4f0;
+}
+
+.tupa-table thead th {
+  background: var(--bills-blue);
+  color: var(--white);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tupa-table tfoot th {
+  background: var(--bills-red);
+  color: var(--white);
+  font-size: 0.88rem;
+}
+
+.tupa-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tupa-table td:last-child,
+.tupa-table th:last-child {
+  text-align: right;
+}
+
+/* positive / negative point coloring */
+.pts-pos { color: #1a7a1a; font-weight: 700; }
+.pts-neg { color: var(--bills-red); font-weight: 700; }
+.pts-zero { color: #888; }
+
+/* ── TUPA Rules button ────────────────────────────────── */
+.rules-btn {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bills-blue);
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.15s, color 0.15s;
+}
+
+.rules-btn:hover {
+  background: var(--white);
+  color: var(--bills-blue);
+}
+
+/* ── Modal overlay ────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay[hidden] { display: none; }
+
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  border: 3px solid var(--bills-blue);
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bills-blue);
+  color: var(--white);
+  padding: 0.85rem 1.1rem;
+  border-radius: 7px 7px 0 0;
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.modal-close:hover { opacity: 1; }
+
+.modal-body {
+  overflow-y: auto;
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+/* ── Rules table ──────────────────────────────────────── */
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.rules-table th,
+.rules-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #dde3f5;
+  text-align: left;
+}
+
+.rules-table thead th {
+  background: var(--bills-blue);
+  color: var(--white);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.rules-table td:last-child { text-align: right; font-weight: 700; }
+
+.rules-table tr.section-header td {
+  background: var(--bills-red);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 540px) {
+  .card-gif-thumb { width: 90px; height: 58px; }
+  .card-title { font-size: 0.85rem; }
+  .tupa-score { font-size: 1.2rem; }
+  .endzone-text { letter-spacing: 0.08em; }
+}

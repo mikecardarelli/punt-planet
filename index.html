@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punt Planet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="endzone endzone-top">
+    <div class="endzone-text">PUNT PLANET</div>
+    <button class="rules-btn" id="rules-btn">TUPA Rules</button>
+  </header>
+
+  <!-- TUPA Rules Modal -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title">TUPA Scoring Key</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table class="rules-table">
+          <thead>
+            <tr><th>Category</th><th>Points</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Punt distance (gross)</td><td>1 per yard</td></tr>
+            <tr><td>Blocked punt or fumble</td><td>Yard-line of scrimmage − 100</td></tr>
+            <tr class="section-header"><td colspan="2">Punt Ended At</td></tr>
+            <tr><td>Touchback</td><td class="pts-neg">−20</td></tr>
+            <tr><td>1-yard line</td><td class="pts-pos">+50</td></tr>
+            <tr><td>2-yard line</td><td class="pts-pos">+40</td></tr>
+            <tr><td>3-yard line</td><td class="pts-pos">+30</td></tr>
+            <tr><td>4-yard line</td><td class="pts-pos">+20</td></tr>
+            <tr><td>Between the 5- and 9-yard line</td><td class="pts-pos">+10</td></tr>
+            <tr><td>Between the 10- and 19-yard line</td><td class="pts-pos">+5</td></tr>
+            <tr><td>Between the 20- and 39-yard line</td><td class="pts-neg">−10</td></tr>
+            <tr><td>Between the 40s</td><td class="pts-neg">−20</td></tr>
+            <tr><td>Inside your own 40</td><td class="pts-neg">−30</td></tr>
+            <tr><td>Safety allowed</td><td class="pts-neg">−40</td></tr>
+            <tr><td>Touchdown allowed</td><td class="pts-neg">−50</td></tr>
+            <tr class="section-header"><td colspan="2">Downed How</td></tr>
+            <tr><td>Returned by the other team</td><td class="pts-neg">−10</td></tr>
+            <tr><td>Fair caught by the other team</td><td class="pts-zero">0</td></tr>
+            <tr><td>Touched on the ground</td><td class="pts-pos">+5</td></tr>
+            <tr><td>Caught on the bounce</td><td class="pts-pos">+5</td></tr>
+            <tr><td>Knocked out of bounds</td><td class="pts-pos">+15</td></tr>
+            <tr><td>Out of bounds inside the 10 (Coffin corner)</td><td class="pts-pos">+20</td></tr>
+            <tr class="section-header"><td colspan="2">Bonus</td></tr>
+            <tr><td>Punted by a kicker</td><td class="pts-pos">+5</td></tr>
+            <tr><td>Almost hits the pylon (Non-touchback)</td><td class="pts-pos">+10</td></tr>
+            <tr><td>Downed by the punter</td><td class="pts-pos">+20</td></tr>
+            <tr><td>Batted back out of the end zone</td><td class="pts-pos">+25 each</td></tr>
+            <tr><td>Bad snap but still got the punt off</td><td class="pts-pos">+30</td></tr>
+            <tr><td>Punted by an offensive player</td><td class="pts-pos">+40</td></tr>
+            <tr><td>Blocked but still got the punt off (Double punt)</td><td class="pts-pos">+50</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <main class="field">
+    <section class="cards-container" id="cards-container"></section>
+  </main>
+
+  <footer class="endzone endzone-bottom">
+    <div class="endzone-text">PUNT PLANET</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
