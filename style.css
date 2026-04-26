@@ -232,8 +232,9 @@ body {
 
 /* rank badge */
 .card-rank {
-  font-size: 1.6rem;
-  font-weight: 900;
+  font-family: 'Jersey 25', monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--bills-blue);
   min-width: 3rem;
   text-align: center;
@@ -247,8 +248,9 @@ body {
 }
 
 .card-title {
-  font-size: 1rem;
-  font-weight: 800;
+  font-family: 'Jersey 15', monospace;
+  font-size: 1.15rem;
+  font-weight: 400;
   color: #111;
   line-height: 1.2;
 }
@@ -287,8 +289,9 @@ body {
 }
 
 .tupa-score {
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-family: 'Jersey 25', monospace;
+  font-size: 1.7rem;
+  font-weight: 400;
   line-height: 1.1;
 }
 
@@ -338,15 +341,19 @@ body {
 .tupa-table thead th {
   background: var(--bills-blue);
   color: var(--white);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-family: 'Jersey 15', monospace;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .tupa-table tfoot th {
   background: var(--bills-red);
   color: var(--white);
-  font-size: 0.88rem;
+  font-family: 'Jersey 15', monospace;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .tupa-table tbody tr:last-child td {
