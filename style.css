@@ -113,8 +113,8 @@ body {
 
 .field-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.8rem);
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Jersey 15', Impact, sans-serif;
+  font-weight: 400;
   color: rgba(255,255,255,0.9);
   letter-spacing: 0.03em;
   text-align: center;
