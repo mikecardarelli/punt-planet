@@ -65,7 +65,7 @@ body {
 }
 
 .endzone-text {
-  font-size: clamp(2.5rem, 9vw, 9rem);
+  font-size: clamp(3rem, 13vw, 13rem);
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
