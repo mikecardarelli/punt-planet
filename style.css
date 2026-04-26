@@ -65,9 +65,9 @@ body {
 }
 
 .endzone-text {
-  font-size: clamp(4rem, 17vw, 16rem);
-  font-weight: 900;
-  letter-spacing: 0.15em;
+  font-size: clamp(2.5rem, 9vw, 9rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-family: 'Jersey 25', Impact, 'Arial Black', sans-serif;
   color: var(--silver);
