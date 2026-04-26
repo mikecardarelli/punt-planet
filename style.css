@@ -248,9 +248,8 @@ body {
 }
 
 .card-title {
-  font-family: 'Jersey 15', monospace;
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 800;
   color: #111;
   line-height: 1.2;
 }
