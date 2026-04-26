@@ -553,6 +553,26 @@ body {
   border-bottom: none;
 }
 
+/* ── Site footer ──────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+.site-footer a {
+  color: #444;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer a:hover {
+  color: #111;
+}
+
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 540px) {
   .card-title { font-size: 0.85rem; }
