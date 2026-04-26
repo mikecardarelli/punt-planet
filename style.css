@@ -19,7 +19,7 @@ body {
   cursor: none; /* replaced by football emoji cursor */
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   background: white;       /* out-of-bounds color */
-  padding: clamp(140px, 20vw, 280px) 0; /* white strip sized to show full goalpost */
+  padding: clamp(140px, 20vw, 280px) 0 2rem; /* top: clears top goalpost; bottom: just breathing room */
   min-height: 100vh;
   overflow-x: hidden;
 }
