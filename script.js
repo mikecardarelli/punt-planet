@@ -91,7 +91,7 @@ const punts = [
     team: 'Los Angeles Rams',
     week: 'Week 13',
     date: 'Dec 5, 2021',
-    matchup: 'at JAX',
+    matchup: 'vs. JAX',
     gif: 'gifs/punt-planet-3.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '58 yards',                          pts: 58 },
@@ -107,7 +107,7 @@ const punts = [
     team: 'Buffalo Bills',
     week: 'Divisional Playoff',
     date: 'Jan 23, 2022',
-    matchup: 'vs. KAN',
+    matchup: 'at KAN',
     gif: 'gifs/punt-planet-4.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '50 yards',                          pts: 50 },
@@ -219,7 +219,7 @@ const punts = [
     team: 'Green Bay Packers',
     week: 'Week 12',
     date: 'Nov 28, 2021',
-    matchup: 'at LAR',
+    matchup: 'vs. LAR',
     gif: 'gifs/punt-planet-11.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '61 yards',              pts: 61 },
@@ -235,7 +235,7 @@ const punts = [
     team: 'Minnesota Vikings',
     week: 'Week 3',
     date: 'Sep 26, 2021',
-    matchup: 'at SEA',
+    matchup: 'vs. SEA',
     gif: 'gifs/punt-planet-12.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '45 yards',                     pts: 45 },
@@ -251,7 +251,7 @@ const punts = [
     team: 'Houston Texans',
     week: 'Week 7',
     date: 'Oct 24, 2021',
-    matchup: 'vs. ARI',
+    matchup: 'at ARI',
     gif: 'gifs/punt-planet-13.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '44 yards',                        pts: 44 },
@@ -267,7 +267,7 @@ const punts = [
     team: 'Denver Broncos',
     week: 'Week 4',
     date: 'Oct 3, 2021',
-    matchup: 'at BAL',
+    matchup: 'vs. BAL',
     gif: 'gifs/punt-planet-14.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '68 yards',             pts: 68 },
@@ -299,7 +299,7 @@ const punts = [
     team: 'Washington Football Team',
     week: 'Week 16',
     date: 'Dec 26, 2021',
-    matchup: 'vs. DAL',
+    matchup: 'at DAL',
     gif: 'gifs/punt-planet-16.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '54 yards',             pts: 54 },
@@ -347,7 +347,7 @@ const punts = [
     team: 'Buffalo Bills',
     week: 'Week 3',
     date: 'Sep 26, 2021',
-    matchup: 'at WAS',
+    matchup: 'vs. WAS',
     gif: 'gifs/punt-planet-19.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '60 yards',             pts: 60 },
@@ -363,7 +363,7 @@ const punts = [
     team: 'Las Vegas Raiders',
     week: 'Week 3',
     date: 'Sep 26, 2021',
-    matchup: 'at MIA',
+    matchup: 'vs. MIA',
     gif: 'gifs/punt-planet-20.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '49 yards',             pts: 49 },
@@ -395,7 +395,7 @@ const punts = [
     team: 'Miami Dolphins',
     week: 'Week 10',
     date: 'Nov 11, 2021',
-    matchup: 'at BAL',
+    matchup: 'vs. BAL',
     gif: 'gifs/punt-planet-22.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '47 yards',             pts: 47 },
@@ -411,7 +411,7 @@ const punts = [
     team: 'Miami Dolphins',
     week: 'Week 16',
     date: 'Dec 27, 2021',
-    matchup: 'vs. NOR',
+    matchup: 'at NOR',
     gif: 'gifs/punt-planet-23.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '42 yards',                    pts: 42 },
@@ -427,7 +427,7 @@ const punts = [
     team: 'Kansas City Chiefs',
     week: 'Week 1',
     date: 'Sep 12, 2021',
-    matchup: 'at CLE',
+    matchup: 'vs. CLE',
     gif: 'gifs/punt-planet-24.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '44 yards',             pts: 44 },
@@ -443,7 +443,7 @@ const punts = [
     team: 'Jacksonville Jaguars',
     week: 'Week 3',
     date: 'Sep 26, 2021',
-    matchup: 'at ARI',
+    matchup: 'vs. ARI',
     gif: 'gifs/punt-planet-25.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: '44 yards',             pts: 44 },
@@ -517,7 +517,7 @@ const shamePunts = [
     team: 'Carolina Panthers',
     week: 'Week 12',
     date: 'Nov 28, 2021',
-    matchup: 'vs. MIA',
+    matchup: 'at MIA',
     gif: 'gifs/punt-planet-worst-1.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 9-yard line',  pts: -91 },
@@ -531,7 +531,7 @@ const shamePunts = [
     team: 'Washington Football Team',
     week: 'Week 16',
     date: 'Dec 26, 2021',
-    matchup: 'vs. DAL',
+    matchup: 'at DAL',
     gif: 'gifs/punt-planet-worst-2.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 10-yard line', pts: -90 },
@@ -559,7 +559,7 @@ const shamePunts = [
     team: 'Atlanta Falcons',
     week: 'Week 10',
     date: 'Nov 14, 2021',
-    matchup: 'vs. DAL',
+    matchup: 'at DAL',
     gif: 'gifs/punt-planet-worst-4.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 17-yard line', pts: -83 },
