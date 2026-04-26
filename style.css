@@ -130,65 +130,54 @@ body {
   position: relative;
   padding: 3rem 1.5rem 4rem;
   background-image:
-    /* 9 evenly-spaced yard lines (10s, 20s, 30s, 40s, 50, 40s, 30s, 20s, 10s) */
-    linear-gradient(to bottom,
-      transparent 10%,  white 10%,  white calc(10%  + 3px), transparent calc(10%  + 3px),
-      transparent 20%,  white 20%,  white calc(20%  + 3px), transparent calc(20%  + 3px),
-      transparent 30%,  white 30%,  white calc(30%  + 3px), transparent calc(30%  + 3px),
-      transparent 40%,  white 40%,  white calc(40%  + 3px), transparent calc(40%  + 3px),
-      transparent 50%,  white 50%,  white calc(50%  + 3px), transparent calc(50%  + 3px),
-      transparent 60%,  white 60%,  white calc(60%  + 3px), transparent calc(60%  + 3px),
-      transparent 70%,  white 70%,  white calc(70%  + 3px), transparent calc(70%  + 3px),
-      transparent 80%,  white 80%,  white calc(80%  + 3px), transparent calc(80%  + 3px),
-      transparent 90%,  white 90%,  white calc(90%  + 3px), transparent calc(90%  + 3px)
+    /* Left hash marks — 4 per 5-yard section, at 20/40/60/80% within each tile */
+    repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent 20%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) calc(20% + 2px), transparent calc(20% + 2px),
+      transparent 40%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.7) calc(40% + 2px), transparent calc(40% + 2px),
+      transparent 60%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.7) calc(60% + 2px), transparent calc(60% + 2px),
+      transparent 80%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.7) calc(80% + 2px), transparent calc(80% + 2px),
+      transparent 100%
     ),
-    /* alternating green stripes — 2 equal bands per 10% zone */
-    repeating-linear-gradient(
-      to bottom,
+    /* Right hash marks — same pattern */
+    repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent 20%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) calc(20% + 2px), transparent calc(20% + 2px),
+      transparent 40%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.7) calc(40% + 2px), transparent calc(40% + 2px),
+      transparent 60%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.7) calc(60% + 2px), transparent calc(60% + 2px),
+      transparent 80%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.7) calc(80% + 2px), transparent calc(80% + 2px),
+      transparent 100%
+    ),
+    /* Full-width yard lines every 5 yards */
+    repeating-linear-gradient(to bottom,
+      white 0, white 2px,
+      transparent 2px, transparent 100%
+    ),
+    /* Alternating green stripes — one shade per 5-yard band */
+    repeating-linear-gradient(to bottom,
       var(--field-green)     0%,
       var(--field-green)     50%,
       var(--field-green-alt) 50%,
       var(--field-green-alt) 100%
     );
-  background-size: 100% 100%, 100% 10%;
+  background-size:
+    24px 5%,    /* left hash — 24px wide, tiles every 5% height */
+    24px 5%,    /* right hash — same */
+    100% 5%,    /* yard lines — full width, every 5% */
+    100% 10%;   /* green stripes — alternates every 5% */
+  background-position:
+    8% 0,
+    92% 0,
+    0 0,
+    0 0;
+  background-repeat:
+    repeat-y,
+    repeat-y,
+    repeat-y,
+    repeat;
 }
 
-/* hash marks — removed, mostly hidden by cards */
-.field::after {
-  content: none;
-}
-
-/* (old hash mark styles kept below for reference)
-.field::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    /* left hash column */
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0px,
-      transparent 58px,
-      var(--line-white) 58px,
-      var(--line-white) 62px,
-      transparent 62px,
-      transparent 120px
-    ),
-    /* right hash column */
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0px,
-      transparent 58px,
-      var(--line-white) 58px,
-      var(--line-white) 62px,
-      transparent 62px,
-      transparent 120px
-    );
-  background-size: 14px 120px, 14px 120px;
-  background-position: 28% 0, 72% 0;
-  background-repeat: repeat-y, repeat-y;
-  pointer-events: none;
-} */
+.field::after { content: none; }
 
 /* ── Cards container ──────────────────────────────────── */
 .cards-container {
