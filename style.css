@@ -261,12 +261,20 @@ body {
   font-size: 1rem;
   font-weight: 800;
   color: #111;
+  line-height: 1.2;
+}
+
+.card-team {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 0.1rem;
 }
 
 .card-sub {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 400;
-  color: #555;
+  color: #888;
   margin-top: 0.2rem;
 }
 

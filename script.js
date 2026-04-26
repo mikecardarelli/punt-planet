@@ -482,7 +482,8 @@ function buildCard(punt) {
       <div class="card-summary">
         <div class="card-rank">#${punt.rank}</div>
         <div class="card-meta">
-          <div class="card-title">${punt.punter} &middot; ${punt.team}</div>
+          <div class="card-title">${punt.punter}</div>
+          <div class="card-team">${punt.team}</div>
           <div class="card-sub">${punt.week} ${expandMatchup(punt.matchup)}</div>
         </div>
         <div class="card-tupa">
