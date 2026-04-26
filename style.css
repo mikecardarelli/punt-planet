@@ -133,19 +133,19 @@ body {
     /* Left hash marks — 4 per 5-yard section, at 20/40/60/80% within each tile */
     repeating-linear-gradient(to bottom,
       transparent 0,
-      transparent 20%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) calc(20% + 2px), transparent calc(20% + 2px),
-      transparent 40%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.7) calc(40% + 2px), transparent calc(40% + 2px),
-      transparent 60%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.7) calc(60% + 2px), transparent calc(60% + 2px),
-      transparent 80%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.7) calc(80% + 2px), transparent calc(80% + 2px),
+      transparent 20%, white 20%, white calc(20% + 2px), transparent calc(20% + 2px),
+      transparent 40%, white 40%, white calc(40% + 2px), transparent calc(40% + 2px),
+      transparent 60%, white 60%, white calc(60% + 2px), transparent calc(60% + 2px),
+      transparent 80%, white 80%, white calc(80% + 2px), transparent calc(80% + 2px),
       transparent 100%
     ),
     /* Right hash marks — same pattern */
     repeating-linear-gradient(to bottom,
       transparent 0,
-      transparent 20%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) calc(20% + 2px), transparent calc(20% + 2px),
-      transparent 40%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.7) calc(40% + 2px), transparent calc(40% + 2px),
-      transparent 60%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.7) calc(60% + 2px), transparent calc(60% + 2px),
-      transparent 80%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.7) calc(80% + 2px), transparent calc(80% + 2px),
+      transparent 20%, white 20%, white calc(20% + 2px), transparent calc(20% + 2px),
+      transparent 40%, white 40%, white calc(40% + 2px), transparent calc(40% + 2px),
+      transparent 60%, white 60%, white calc(60% + 2px), transparent calc(60% + 2px),
+      transparent 80%, white 80%, white calc(80% + 2px), transparent calc(80% + 2px),
       transparent 100%
     ),
     /* Full-width yard lines every 5 yards */
@@ -166,8 +166,8 @@ body {
     100% 5%,    /* yard lines — full width, every 5% */
     100% 10%;   /* green stripes — alternates every 5% */
   background-position:
-    8% 0,
-    92% 0,
+    0 0,
+    100% 0,
     0 0,
     0 0;
   background-repeat:
