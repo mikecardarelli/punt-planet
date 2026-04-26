@@ -4,13 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Punt Planet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="endzone endzone-top">
+    <svg class="goalpost" viewBox="0 0 120 150" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4"   y="0"   width="9"  height="115" rx="3"/>
+      <rect x="107" y="0"   width="9"  height="115" rx="3"/>
+      <rect x="0"   y="110" width="120" height="9"  rx="3"/>
+      <rect x="54"  y="119" width="12" height="31"  rx="3"/>
+    </svg>
     <div class="endzone-text">PUNT PLANET</div>
-    <button class="rules-btn" id="rules-btn">TUPA Rules</button>
   </header>
 
   <!-- TUPA Rules Modal -->
@@ -63,16 +71,28 @@
   </div>
 
   <main class="field">
+    <p class="field-subtitle">Home of The Universal Punt Assessment (<a class="tupa-link" id="rules-btn">TUPA</a>) punting statistic.</p>
+
+    <div class="section-divider">
+      <span>Top 25 Punts of 2021</span>
+    </div>
+
     <section class="cards-container" id="cards-container"></section>
 
-    <div class="shame-divider">
-      <span>HALL OF SHAME</span>
+    <div class="section-divider shame-divider">
+      <span>Bottom 5 Punts of 2021</span>
     </div>
 
     <section class="cards-container shame-container" id="shame-container"></section>
   </main>
 
   <footer class="endzone endzone-bottom">
+    <svg class="goalpost" viewBox="0 0 120 150" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4"   y="0"   width="9"  height="115" rx="3"/>
+      <rect x="107" y="0"   width="9"  height="115" rx="3"/>
+      <rect x="0"   y="110" width="120" height="9"  rx="3"/>
+      <rect x="54"  y="119" width="12" height="31"  rx="3"/>
+    </svg>
     <div class="endzone-text">PUNT PLANET</div>
   </footer>
 

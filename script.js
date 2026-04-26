@@ -465,7 +465,7 @@ function buildCard(punt) {
 }
 
 const container = document.getElementById('cards-container');
-container.innerHTML = [...punts].reverse().map(buildCard).join('');
+container.innerHTML = punts.map(buildCard).join('');
 
 /* ── Hall of Shame data ─────────────────────────────── */
 const shamePunts = [
@@ -481,8 +481,6 @@ const shamePunts = [
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 9-yard line',  pts: -91 },
       { category: 'Downed How',            detail: 'Touchdown',               pts: -50 },
-      { category: 'Punt Ended At',         detail: '—',                       pts:   0 },
-      { category: 'Bonus',                 detail: '—',                       pts:   0 },
     ],
   },
   {
@@ -497,8 +495,6 @@ const shamePunts = [
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 10-yard line', pts: -90 },
       { category: 'Downed How',            detail: 'Touchdown',               pts: -50 },
-      { category: 'Punt Ended At',         detail: '—',                       pts:   0 },
-      { category: 'Bonus',                 detail: '—',                       pts:   0 },
     ],
   },
   {
@@ -513,8 +509,6 @@ const shamePunts = [
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 12-yard line', pts: -88 },
       { category: 'Downed How',            detail: 'Touchdown',               pts: -50 },
-      { category: 'Punt Ended At',         detail: '—',                       pts:   0 },
-      { category: 'Bonus',                 detail: '—',                       pts:   0 },
     ],
   },
   {
@@ -529,8 +523,6 @@ const shamePunts = [
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 17-yard line', pts: -83 },
       { category: 'Downed How',            detail: 'Touchdown',               pts: -50 },
-      { category: 'Punt Ended At',         detail: '—',                       pts:   0 },
-      { category: 'Bonus',                 detail: '—',                       pts:   0 },
     ],
   },
   {
@@ -552,7 +544,7 @@ const shamePunts = [
 ];
 
 const shameContainer = document.getElementById('shame-container');
-shameContainer.innerHTML = [...shamePunts].reverse().map(buildCard).join('');
+shameContainer.innerHTML = shamePunts.map(buildCard).join('');
 
 /* ── TUPA Rules modal ───────────────────────────────── */
 const overlay  = document.getElementById('modal-overlay');
