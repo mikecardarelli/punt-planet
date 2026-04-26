@@ -105,7 +105,7 @@ const punts = [
     tupa: 130,
     punter: 'Matt Haack',
     team: 'Buffalo Bills',
-    week: 'Divisional Playoff',
+    week: 'Divisional Round',
     date: 'Jan 23, 2022',
     matchup: 'at KAN',
     gif: 'gifs/punt-planet-4.webp',
@@ -517,7 +517,7 @@ const shamePunts = [
     punter: 'Jake Bailey',
     team: 'New England Patriots',
     week: 'Week 15',
-    matchup: 'vs. IND',
+    matchup: 'at IND',
     gif: 'gifs/punt-planet-worst-1.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 32-yard line', pts: -32 },
@@ -530,7 +530,7 @@ const shamePunts = [
     punter: 'Jordan Berry',
     team: 'Minnesota Vikings',
     week: 'Week 6',
-    matchup: 'vs. CAR',
+    matchup: 'at CAR',
     gif: 'gifs/punt-planet-worst-2.webp',
     breakdown: [
       { category: 'Punt Distance (gross)', detail: 'Blocked at 24-yard line', pts: -24 },

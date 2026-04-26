@@ -17,7 +17,7 @@ html { scroll-behavior: smooth; }
 
 body {
   cursor: none; /* replaced by football emoji cursor */
-  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-family: 'IBM Plex Mono', 'Arial Black', Arial, sans-serif;
   background: white;       /* out-of-bounds color */
   padding: clamp(140px, 20vw, 280px) 0 2rem; /* top: clears top goalpost; bottom: just breathing room */
   min-height: 100vh;
@@ -161,10 +161,10 @@ body {
       var(--field-green-alt) 100%
     );
   background-size:
-    24px 5%,    /* left hash — 24px wide, tiles every 5% height */
-    24px 5%,    /* right hash — same */
-    100% 5%,    /* yard lines — full width, every 5% */
-    100% 10%;   /* green stripes — alternates every 5% */
+    24px 120px,   /* left hash — 24px wide, tiles every 120px */
+    24px 120px,   /* right hash — same */
+    100% 120px,   /* yard lines — full width, every 120px */
+    100% 240px;   /* green stripes — alternates every 240px */
   background-position:
     0 0,
     100% 0,
@@ -248,21 +248,24 @@ body {
 }
 
 .card-title {
-  font-size: 1rem;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #111;
   line-height: 1.2;
 }
 
 .card-team {
-  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #555;
+  color: #111;
   margin-top: 0.1rem;
 }
 
 .card-sub {
-  font-size: 0.78rem;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 0.88rem;
   font-weight: 400;
   color: #888;
   margin-top: 0.2rem;
@@ -327,7 +330,7 @@ body {
 .tupa-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
 }
 
 .tupa-table th,
@@ -341,7 +344,7 @@ body {
   background: var(--bills-blue);
   color: var(--white);
   font-family: 'Jersey 15', monospace;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -351,7 +354,7 @@ body {
   background: var(--bills-red);
   color: var(--white);
   font-family: 'Jersey 15', monospace;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
 }
 
@@ -559,7 +562,7 @@ body {
   padding: clamp(110px, 17vw, 240px) 1rem 1rem;
   font-size: 0.8rem;
   color: #666;
-  font-family: Arial, sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
 }
 
