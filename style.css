@@ -556,7 +556,7 @@ body {
 /* ── Site footer ──────────────────────────────────────── */
 .site-footer {
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  padding: clamp(110px, 17vw, 240px) 1rem 1rem;
   font-size: 0.8rem;
   color: #666;
   font-family: Arial, sans-serif;
